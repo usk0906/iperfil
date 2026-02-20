@@ -58,23 +58,36 @@
         .glass-panel:hover .accessory {
             transform: scale(1.1) rotate(10deg);
         }
-        /* Ajuste fino para os botões glass */
+        
+        /* Botões Base Glass */
         .glass-btn {
             background: rgba(20, 20, 20, 0.3);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             transition: all 0.3s ease;
         }
-        /* Ao passar o mouse, o fundo fica dourado e o texto preto */
-        .glass-btn:hover {
-            background: var(--brand-gold) !important;
-            border-color: var(--brand-gold) !important;
-            color: black !important;
+
+        /* Cores Específicas no Hover */
+        .btn-insta:hover {
+            background: #E1306C !important;
+            border-color: #E1306C !important;
+            color: white !important;
         }
-        /* Garante que os ícones também fiquem pretos no hover para contraste */
-        .glass-btn:hover i {
-            color: black !important;
+        .btn-insta:hover i { color: white !important; }
+
+        .btn-tiktok:hover {
+            background: #000000 !important;
+            border-color: #333333 !important;
+            color: white !important;
         }
+        .btn-tiktok:hover i { color: white !important; }
+
+        .btn-wpp:hover {
+            background: #25D366 !important;
+            border-color: #25D366 !important;
+            color: white !important;
+        }
+        .btn-wpp:hover i { color: white !important; }
     </style>
 </head>
 <body class="antialiased selection:bg-brand-gold/30 selection:text-white">
@@ -113,20 +126,24 @@
             </div>
             
             <h1 class="text-3xl font-bold text-main mb-1">Isloch</h1>
-            <p class="text-gold font-black text-[10px] uppercase tracking-widest mb-4">Fundador & Lead Developer</p>
+            <p class="text-gold font-black text-[10px] uppercase tracking-widest mb-4">Founder, CEO & Dev</p>
             
             <p class="text-sm text-muted leading-relaxed mb-8 px-2">
-                Fundador e Desenvolvedor Líder da Udesaken. Especialista na criação de bots, automações avançadas e arquitetura de sistemas.
+                A mente por trás do ecossistema Udesaken. Transformo linhas de código em tecnologias de alto impacto, liderando a criação de bots inteligentes e sistemas de alta performance.
             </p>
 
             <div class="w-full flex flex-col gap-3">
                 
-                <a href="https://instagram.com/isloch_" target="_blank" class="glass-btn w-full py-4 rounded-xl flex items-center justify-center gap-3 text-sm font-bold text-main transition shadow-lg group">
+                <a href="https://instagram.com/isloch_" target="_blank" class="glass-btn btn-insta w-full py-4 rounded-xl flex items-center justify-center gap-3 text-sm font-bold text-main shadow-lg">
                     <i class="fab fa-instagram text-xl transition-colors"></i> Instagram
                 </a>
                 
-                <a href="https://tiktok.com/@isloch_" target="_blank" class="glass-btn w-full py-4 rounded-xl flex items-center justify-center gap-3 text-sm font-bold text-main transition shadow-lg group">
+                <a href="https://tiktok.com/@isloch_" target="_blank" class="glass-btn btn-tiktok w-full py-4 rounded-xl flex items-center justify-center gap-3 text-sm font-bold text-main shadow-lg">
                     <i class="fab fa-tiktok text-xl transition-colors"></i> TikTok
+                </a>
+
+                <a href="https://www.whatsapp.com/channel/0029VbBkK4U5kg77KBDyLC0a" target="_blank" class="glass-btn btn-wpp w-full py-4 rounded-xl flex items-center justify-center gap-3 text-sm font-bold text-main shadow-lg">
+                    <i class="fab fa-whatsapp text-xl transition-colors"></i> Canal de Figurinhas
                 </a>
                 
             </div>
