@@ -63,16 +63,18 @@
             background: rgba(20, 20, 20, 0.3);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
         }
+        /* Ao passar o mouse, o fundo fica dourado e o texto preto */
         .glass-btn:hover {
-            background: var(--brand-gold);
-            border-color: var(--brand-gold);
+            background: var(--brand-gold) !important;
+            border-color: var(--brand-gold) !important;
             color: black !important;
         }
-        /* Cor original nos ícones ao passar o mouse */
-        .hover-insta:hover i { color: #E1306C; }
-        .hover-tiktok:hover i { color: #000000; }
-        .hover-wpp:hover i { color: #000000; }
+        /* Garante que os ícones também fiquem pretos no hover para contraste */
+        .glass-btn:hover i {
+            color: black !important;
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-brand-gold/30 selection:text-white">
@@ -85,7 +87,7 @@
 
     <nav class="fixed w-full z-50 top-0 nav-liquid transition-all duration-300">
         <div class="max-w-[1200px] mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="https://udesaken.site" class="flex items-center gap-4 cursor-pointer group">
+            <a href="#" class="flex items-center gap-4 cursor-pointer group">
                 <div class="w-9 h-9 rounded-lg overflow-hidden border border-white/10 bg-black">
                      <img src="https://udesaken.site/uskcoroa.png" alt="Logo" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition">
                 </div>
@@ -111,25 +113,22 @@
             </div>
             
             <h1 class="text-3xl font-bold text-main mb-1">Isloch</h1>
-            <p class="text-gold font-black text-[10px] uppercase tracking-widest mb-4">CEO, Fundador & Developer</p>
-            <p class="text-sm text-muted leading-relaxed mb-8 px-2">Responsável por toda a Udesaken. Atua diretamente no desenvolvimento do site, do bot e dos sistemas.</p>
+            <p class="text-gold font-black text-[10px] uppercase tracking-widest mb-4">Fundador & Lead Developer</p>
+            
+            <p class="text-sm text-muted leading-relaxed mb-8 px-2">
+                Fundador e Desenvolvedor Líder da Udesaken. Especialista na criação de bots, automações avançadas e arquitetura de sistemas.
+            </p>
 
             <div class="w-full flex flex-col gap-3">
-                <a href="https://udesaken.site" class="glass-btn w-full py-4 rounded-xl flex items-center justify-center gap-3 text-sm font-bold text-main transition shadow-lg">
-                    <i class="fas fa-globe text-gold"></i> Site Oficial
+                
+                <a href="https://instagram.com/isloch_" target="_blank" class="glass-btn w-full py-4 rounded-xl flex items-center justify-center gap-3 text-sm font-bold text-main transition shadow-lg group">
+                    <i class="fab fa-instagram text-xl transition-colors"></i> Instagram
                 </a>
                 
-                <a href="https://instagram.com/isloch_" target="_blank" class="glass-btn hover-insta w-full py-4 rounded-xl flex items-center justify-center gap-3 text-sm font-bold text-main transition shadow-lg group">
-                    <i class="fab fa-instagram transition-colors"></i> Instagram
+                <a href="https://tiktok.com/@isloch_" target="_blank" class="glass-btn w-full py-4 rounded-xl flex items-center justify-center gap-3 text-sm font-bold text-main transition shadow-lg group">
+                    <i class="fab fa-tiktok text-xl transition-colors"></i> TikTok
                 </a>
                 
-                <a href="https://tiktok.com/@isloch_" target="_blank" class="glass-btn hover-tiktok w-full py-4 rounded-xl flex items-center justify-center gap-3 text-sm font-bold text-main transition shadow-lg group">
-                    <i class="fab fa-tiktok transition-colors"></i> TikTok
-                </a>
-                
-                <a href="https://wa.me/447562847091" target="_blank" class="glass-btn hover-wpp w-full py-4 rounded-xl flex items-center justify-center gap-3 text-sm font-bold text-main transition shadow-lg group">
-                    <i class="fab fa-whatsapp text-green-500 transition-colors"></i> Contato Direto
-                </a>
             </div>
         </div>
     </section>
