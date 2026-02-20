@@ -1,16 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br" class="scroll-smooth">
 <head>
-    <meta property="og:title" content="Isloch | CEO Udesaken">
-    <meta property="og:description" content="Desenvolvedor e Fundador da Udesaken Group.">
-    <meta property="og:image" content="https://udesaken.site/uskcoroa.png">
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isloch | CEO Udesaken</title>
-
-    <link rel="stylesheet" href="style.css">
-
+    
+    <link rel="stylesheet" href="https://udesaken.site/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -30,64 +25,115 @@
             }
         }
     </script>
+
+    <style>
+        :root {
+            --brand-gold: #C6A87C;
+        }
+        .photo-wrapper {
+            position: relative;
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 20px auto;
+        }
+        .team-photo {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--brand-gold); 
+            box-shadow: 0 0 20px rgba(198, 168, 124, 0.3);
+            transition: 0.3s;
+        }
+        .accessory {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 55px;
+            height: auto;
+            z-index: 10;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5));
+            transition: 0.3s;
+        }
+        .glass-panel:hover .accessory {
+            transform: scale(1.1) rotate(10deg);
+        }
+        /* Ajuste fino para os botões glass */
+        .glass-btn {
+            background: rgba(20, 20, 20, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glass-btn:hover {
+            background: var(--brand-gold);
+            border-color: var(--brand-gold);
+            color: black !important;
+        }
+        /* Cor original nos ícones ao passar o mouse */
+        .hover-insta:hover i { color: #E1306C; }
+        .hover-tiktok:hover i { color: #000000; }
+        .hover-wpp:hover i { color: #000000; }
+    </style>
 </head>
-<body class="antialiased bg-black text-white selection:bg-brand-gold/30 selection:text-white">
+<body class="antialiased selection:bg-brand-gold/30 selection:text-white">
 
     <div class="liquid-container">
         <div class="liquid-orb orb-1"></div>
         <div class="liquid-orb orb-2"></div>
+        <div class="liquid-orb orb-3"></div>
     </div>
 
-    <nav class="w-full h-20 flex items-center justify-center border-b border-white/10 bg-black/50 backdrop-blur-md relative z-10">
-        <div class="flex items-center gap-3">
-            <img src="uskcoroa.png" alt="Logo Udesaken" class="w-8 h-8 opacity-90">
-            <span class="text-sm font-bold tracking-widest text-brand-gold uppercase">Udesaken Group</span>
+    <nav class="fixed w-full z-50 top-0 nav-liquid transition-all duration-300">
+        <div class="max-w-[1200px] mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="https://udesaken.site" class="flex items-center gap-4 cursor-pointer group">
+                <div class="w-9 h-9 rounded-lg overflow-hidden border border-white/10 bg-black">
+                     <img src="https://udesaken.site/uskcoroa.png" alt="Logo" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition">
+                </div>
+                <span class="text-lg font-bold tracking-tight text-main group-hover:text-gold transition">
+                    Udesaken <span class="text-[10px] text-gray-500 ml-1 uppercase">CEO</span>
+                </span>
+            </a>
+            
+            <div class="flex items-center gap-6">
+                <button id="theme-btn" class="theme-toggle" aria-label="Mudar Tema" style="padding: 8px;">
+                    <i class="fas fa-moon text-sm"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
-    <section class="pt-20 pb-10 text-center px-6 relative z-10">
-        <div class="max-w-2xl mx-auto">
+    <section class="min-h-screen flex items-center justify-center relative z-10 pt-20 pb-10 px-6">
+        <div class="glass-panel p-10 rounded-[30px] flex flex-col items-center text-center fade-up gold-theme w-full max-w-md shadow-2xl">
             
-            <div class="w-28 h-28 mx-auto mb-6 rounded-2xl overflow-hidden border border-white/10 bg-black shadow-[0_0_30px_rgba(198,168,124,0.15)] flex items-center justify-center">
-                <img src="uskcoroa.png" alt="Isloch" class="w-20 h-20 object-contain hover:scale-110 transition duration-500">
+            <div class="photo-wrapper">
+                <img src="https://udesaken.site/islo.jpg" alt="CEO Islo" class="team-photo">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23C6A87C'%3E%3Cpath d='M5 16L3 5L8.5 10L12 4L15.5 10L21 5L19 16H5ZM19 19C19 19.5523 18.5523 20 18 20H6C5.44772 20 5 19.5523 5 19V18H19V19Z'%3E%3C/path%3E%3C/svg%3E" class="accessory">
             </div>
             
-            <h1 class="text-4xl md:text-5xl font-black mb-2 tracking-tighter drop-shadow-lg">
-                Isloch 👑
-            </h1>
-            <p class="text-brand-gold font-bold mb-6 tracking-widest uppercase text-xs md:text-sm">
-                CEO & Fundador
-            </p>
-            
-            <p class="text-gray-400 mb-12 max-w-md mx-auto font-medium leading-relaxed">
-                Desenvolvedor especializado em Node.js e Baileys. Criador de automações e líder da Udesaken.
-            </p>
+            <h1 class="text-3xl font-bold text-main mb-1">Isloch</h1>
+            <p class="text-gold font-black text-[10px] uppercase tracking-widest mb-4">CEO, Fundador & Developer</p>
+            <p class="text-sm text-muted leading-relaxed mb-8 px-2">Responsável por toda a Udesaken. Atua diretamente no desenvolvimento do site, do bot e dos sistemas.</p>
 
-            <div class="flex flex-col gap-4 max-w-sm mx-auto">
+            <div class="w-full flex flex-col gap-3">
+                <a href="https://udesaken.site" class="glass-btn w-full py-4 rounded-xl flex items-center justify-center gap-3 text-sm font-bold text-main transition shadow-lg">
+                    <i class="fas fa-globe text-gold"></i> Site Oficial
+                </a>
                 
-                <a href="https://udesaken.site" class="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-2xl hover:border-brand-gold hover:bg-brand-gold/10 transition flex items-center justify-between group backdrop-blur-sm">
-                    <span class="font-bold flex items-center gap-3">
-                        <i class="fas fa-globe text-brand-gold"></i> Site Oficial
-                    </span>
-                    <i class="fas fa-arrow-right text-gray-500 group-hover:text-brand-gold transition transform group-hover:translate-x-1"></i>
+                <a href="https://instagram.com/isloch_" target="_blank" class="glass-btn hover-insta w-full py-4 rounded-xl flex items-center justify-center gap-3 text-sm font-bold text-main transition shadow-lg group">
+                    <i class="fab fa-instagram transition-colors"></i> Instagram
                 </a>
-
-                <a href="https://tiktok.com/@udesakenofc" target="_blank" class="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-2xl hover:border-pink-500 hover:bg-pink-500/10 transition flex items-center justify-between group backdrop-blur-sm">
-                    <span class="font-bold flex items-center gap-3">
-                        <i class="fab fa-tiktok text-white group-hover:text-pink-500 transition"></i> TikTok
-                    </span>
-                    <i class="fas fa-arrow-right text-gray-500 group-hover:text-pink-500 transition transform group-hover:translate-x-1"></i>
+                
+                <a href="https://tiktok.com/@isloch_" target="_blank" class="glass-btn hover-tiktok w-full py-4 rounded-xl flex items-center justify-center gap-3 text-sm font-bold text-main transition shadow-lg group">
+                    <i class="fab fa-tiktok transition-colors"></i> TikTok
                 </a>
-
-                <a href="https://wa.me/447562847091" target="_blank" class="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-2xl hover:border-green-500 hover:bg-green-500/10 transition flex items-center justify-between group backdrop-blur-sm mt-4">
-                    <span class="font-bold flex items-center gap-3 text-white group-hover:text-green-400 transition">
-                        <i class="fab fa-whatsapp text-green-500 text-xl"></i> Contato Direto
-                    </span>
+                
+                <a href="https://wa.me/447562847091" target="_blank" class="glass-btn hover-wpp w-full py-4 rounded-xl flex items-center justify-center gap-3 text-sm font-bold text-main transition shadow-lg group">
+                    <i class="fab fa-whatsapp text-green-500 transition-colors"></i> Contato Direto
                 </a>
-
             </div>
         </div>
     </section>
 
+    <script src="https://udesaken.site/script.js"></script>
 </body>
 </html>
