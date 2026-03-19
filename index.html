@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Isloch | Udesaken</title>
+    <title>Equipe | Udesaken</title>
     
     <link rel="stylesheet" href="https://udesaken.site/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,67 +30,46 @@
         :root {
             --brand-gold: #C6A87C;
         }
-        .photo-wrapper {
-            position: relative;
-            width: 140px;
-            height: 140px;
-            margin: 0 auto 20px auto;
+        
+        /* Efeito Hover nos Cards da Equipe */
+        .team-card {
+            background: rgba(20, 20, 20, 0.4);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .team-photo {
+        
+        .team-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(198, 168, 124, 0.3);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(198, 168, 124, 0.1);
+        }
+
+        .card-photo-wrapper {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 16px auto;
+            border-radius: 50%;
+            padding: 3px;
+            background: linear-gradient(135deg, var(--brand-gold), #4a3e2b);
+            transition: all 0.4s ease;
+        }
+
+        .team-card:hover .card-photo-wrapper {
+            box-shadow: 0 0 20px rgba(198, 168, 124, 0.4);
+            transform: scale(1.05);
+        }
+
+        .card-photo {
             width: 100%;
             height: 100%;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid var(--brand-gold); 
-            box-shadow: 0 0 20px rgba(198, 168, 124, 0.3);
-            transition: 0.3s;
+            border: 3px solid #111;
         }
-        .accessory {
-            position: absolute;
-            top: -10px;
-            right: -10px;
-            width: 55px;
-            height: auto;
-            z-index: 10;
-            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5));
-            transition: 0.3s;
-        }
-        .glass-panel:hover .accessory {
-            transform: scale(1.1) rotate(10deg);
-        }
-        
-        /* Botões Base Glass */
-        .glass-btn {
-            background: rgba(20, 20, 20, 0.3);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        /* Cores Específicas no Hover */
-        .btn-insta:hover {
-            background: #E1306C !important;
-            border-color: #E1306C !important;
-            color: white !important;
-        }
-        .btn-insta:hover i { color: white !important; }
-
-        .btn-tiktok:hover {
-            background: #000000 !important;
-            border-color: #333333 !important;
-            color: white !important;
-        }
-        .btn-tiktok:hover i { color: white !important; }
-
-        .btn-wpp:hover {
-            background: #25D366 !important;
-            border-color: #25D366 !important;
-            color: white !important;
-        }
-        .btn-wpp:hover i { color: white !important; }
     </style>
 </head>
-<body class="antialiased selection:bg-brand-gold/30 selection:text-white">
+<body class="antialiased selection:bg-brand-gold/30 selection:text-white text-gray-200">
 
     <div class="liquid-container">
         <div class="liquid-orb orb-1"></div>
@@ -100,12 +79,12 @@
 
     <nav class="fixed w-full z-50 top-0 nav-liquid transition-all duration-300">
         <div class="max-w-[1200px] mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="https://udesaken.site/" class="flex items-center gap-4 cursor-pointer group">
+            <a href="#" class="flex items-center gap-4 cursor-pointer group">
                 <div class="w-9 h-9 rounded-lg overflow-hidden border border-white/10 bg-black">
                      <img src="https://udesaken.site/uskcoroa.png" alt="Logo" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition">
                 </div>
-                <span class="text-lg font-bold tracking-tight text-main group-hover:text-gold transition">
-                    Udesaken <span class="text-[10px] text-gray-500 ml-1 uppercase">CEO</span>
+                <span class="text-lg font-bold tracking-tight text-white group-hover:text-[#C6A87C] transition">
+                    Udesaken <span class="text-[10px] text-gray-500 ml-1 uppercase">Equipe</span>
                 </span>
             </a>
             
@@ -117,41 +96,36 @@
         </div>
     </nav>
 
-    <section class="min-h-screen flex items-center justify-center relative z-10 pt-20 pb-10 px-6">
-        <div class="glass-panel p-10 rounded-[30px] flex flex-col items-center text-center fade-up gold-theme w-full max-w-md shadow-2xl">
-            
-            <div class="photo-wrapper">
-                <img src="https://udesaken.site/islo.jpg" alt="CEO Islo" class="team-photo">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23C6A87C'%3E%3Cpath d='M5 16L3 5L8.5 10L12 4L15.5 10L21 5L19 16H5ZM19 19C19 19.5523 18.5523 20 18 20H6C5.44772 20 5 19.5523 5 19V18H19V19Z'%3E%3C/path%3E%3C/svg%3E" class="accessory">
-            </div>
-            
-            <h1 class="text-3xl font-bold text-main mb-1">Isloch</h1>
-            <p class="text-gold font-black text-[10px] uppercase tracking-widest mb-4">Founder, CEO & Dev</p>
-            
-            <p class="text-sm text-muted leading-relaxed mb-8 px-2">
-                A mente por trás do ecossistema Udesaken. Transformo linhas de código em tecnologias de alto impacto, liderando a criação de bots inteligentes e sistemas de alta performance.
+    <section class="min-h-screen flex flex-col items-center justify-center relative z-10 pt-28 pb-16 px-6">
+        
+        <div class="text-center mb-12 fade-up">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-3">Nossa <span class="text-[#C6A87C]">Equipe</span></h1>
+            <p class="text-gray-400 text-sm md:text-base max-w-lg mx-auto">
+                Conheça as mentes por trás da Udesaken. Clique em um perfil para saber mais.
             </p>
+        </div>
 
-            <div class="w-full flex flex-col gap-3">
-                
-                <a href="https://instagram.com/isloch_" target="_blank" class="glass-btn btn-insta w-full py-4 rounded-xl flex items-center justify-center gap-3 text-sm font-bold text-main shadow-lg">
-                    <i class="fab fa-instagram text-xl transition-colors"></i> Instagram
-                </a>
-                
-                <a href="https://tiktok.com/@isloch_" target="_blank" class="glass-btn btn-tiktok w-full py-4 rounded-xl flex items-center justify-center gap-3 text-sm font-bold text-main shadow-lg">
-                    <i class="fab fa-tiktok text-xl transition-colors"></i> TikTok
-                </a>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-5xl fade-up">
+            
+            <a href="isloch.html" class="team-card p-8 rounded-[30px] flex flex-col items-center text-center cursor-pointer group">
+                <div class="card-photo-wrapper">
+                    <img src="https://udesaken.site/islo.jpg" alt="CEO Islo" class="card-photo">
+                </div>
+                <h2 class="text-2xl font-bold text-white group-hover:text-[#C6A87C] transition-colors mb-1">Isloch</h2>
+                <p class="text-[#C6A87C] font-black text-[10px] uppercase tracking-widest">Founder, CEO & Dev</p>
+            </a>
 
-                <a href="https://www.whatsapp.com/channel/0029VbBkK4U5kg77KBDyLC0a" target="_blank" class="glass-btn btn-wpp w-full py-4 rounded-xl flex items-center justify-center gap-3 text-sm font-bold text-main shadow-lg">
-                    <i class="fab fa-whatsapp text-xl transition-colors"></i> Canal de Figurinhas
-                </a>
-                
-            </div>
+            <a href="vinnz.html" class="team-card p-8 rounded-[30px] flex flex-col items-center text-center cursor-pointer group">
+                <div class="card-photo-wrapper" style="background: linear-gradient(135deg, #666, #222);">
+                    <img src="https://udesaken.site/uskcoroa.png" alt="Vinnz" class="card-photo bg-black p-2">
+                </div>
+                <h2 class="text-2xl font-bold text-white group-hover:text-gray-300 transition-colors mb-1">Vinnz</h2>
+                <p class="text-gray-400 font-black text-[10px] uppercase tracking-widest">Admin Group & Editor</p>
+            </a>
+
         </div>
     </section>
 
     <script src="https://udesaken.site/script.js"></script>
 </body>
-
 </html>
-
